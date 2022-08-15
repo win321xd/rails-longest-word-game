@@ -1,0 +1,14 @@
+<h1>NEW GAME</h1>
+<br>
+<div class="d-flex align-items-center">
+    <% @letters.each do |letter|%>
+      <button class="btn btn-primary mr-2 rounded"><%= letter %></button>
+    <% end %>
+</div>
+<br>
+
+<form action="/score" data-turbo="false">
+  <p> Guess a Word! </p>
+  <input type="text" name="word">
+  <input type="submit" value="Guess!">
+</form>
